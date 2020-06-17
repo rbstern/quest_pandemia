@@ -1,0 +1,32 @@
+---
+title: "Análise questionário pandemia"
+output: html_document
+---
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+library(tidyverse)
+data = read_csv("../data/quest_pandemia.csv")
+colnames(data) = c("ano_formatura",
+                   "acesso_internet",
+                   "tipo_acesso",
+                   "tipo_acesso_total",
+                   "equipamento",
+                   "cond_local_estudo",
+                   "falta_local_estudo",
+                   "biblioteca_importancia",
+                   "num_discplinas_ead",
+                   "motivos_nao_ead",
+                   "disciplinas_ead",
+                   "prop_acesso_para_ead",
+                   "tipo_disciplinas_ead",
+                   "comentarios")
+```
+
+# Acesso a internet
+
+```{r echo = FALSE}
+data$acesso_internet %>% 
+  gsub("Sim, mas restrito a emails e mensagens", 
+       "Restrito", .) %>% 
+  table()
+```
