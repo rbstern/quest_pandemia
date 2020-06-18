@@ -1125,67 +1125,276 @@ $(document).ready(function () {
 </div>
 <div id="desconsiderando-suas-atuais-limitacoes-de-acesso-quais-disciplinas-voce-estaria-disposto-a-cursar-a-distancia-no-proximo-semestre-voce-tem-que-ter-o-pre-requisito" class="section level1">
 <h1>Desconsiderando suas atuais limitações de acesso, quais disciplinas você estaria disposto a cursar a distância no próximo semestre? (você tem que ter o pré-requisito)</h1>
-<pre><code>## .
-##                     ANÁLISE DE REGRESSÃO 
-##                                       23 
-##                        ANÁLISE DE RISCOS 
-##                                       25 
-##                            ATUÁRIA GERAL 
-##                                       13 
-##                CONSTRUÇÃO DE INDICADORES 
-##                                       28 
-##        CONTROLE ESTATÍSTICO DE QUALIDADE 
-##                                       45 
-##                    ESTATÍSTICA BAYESIANA 
-##                                       34 
-##               ESTATÍSTICA MULTIVARIADA 1 
-##                                       22 
-##              ESTATÍSTICA NÃO-PARAMÉTRICA 
-##                                       17 
-##                    ESTUDOS POPULACIONAIS 
-##                                       22 
-##             FUNDAMENTOS DE PROBABILIDADE 
-##                                       50 
-##      INFERÊNCIA ESTATÍSTICA (6 Créditos) 
-##                                       17 
-##                 INFERÊNCIA ESTATISTICA A 
-##                                       14 
-##                 INFERÊNCIA ESTATISTICA B 
-##                                       12 
-##                 INTRODUÇÃO À ESTATÍSTICA 
-##                                       49 
-##      INTRODUÇÃO À INFERÊNCIA ESTATÍSTICA 
-##                                       57 
-##            INTRODUÇÃO À TEORIA DAS FILAS 
-##                                       24 
-##      LABORATÓRIO DE ESTATÍSTICA APLICADA 
-##                                       15 
-##                     MÉTODOS EM BIOMETRIA 
-##                                       21 
-##                       MINERAÇÃO DE DADOS 
-##                                       39 
-##                      PESQUISA DE MERCADO 
-##                                       19 
-## PLANEJAMENTO E ANÁLISE DE EXPERIMENTOS 1 
-##                                       25 
-## PLANEJAMENTO E ANÁLISE DE EXPERIMENTOS 2 
-##                                        6 
-##                          PROBABILIDADE 1 
-##                                       44 
-##                          PROBABILIDADE 2 
-##                                       38 
-##                   PROCESSOS ESTOCÁSTICOS 
-##                                       37 
-##                  PROGRAMAÇÃO ESTATÍSTICA 
-##                                       37 
-##                       SÉRIES FINANCEIRAS 
-##                                       14 
-##                         SÉRIES TEMPORAIS 
-##                                       18 
-##                                      TG1 
-##                                       27 
-##                                      TG2 
-##                                       13</code></pre>
+<pre><code>## [1] &quot;ANÁLISE DE REGRESSÃO&quot;
+##                                                                         
+##  |                       |              | dt_disc[[disciplina]] |      |
+##  |                       |              |                 FALSE | TRUE |
+##  | --------------------- | ------------ | --------------------- | ---- |
+##  | dt_disc$ano_formatura |         2020 |                    38 |      |
+##  |                       |         2021 |                    17 |   19 |
+##  |                       | Ou após 2021 |                   159 |    4 |
+##  |                       | #Total cases |                   214 |   23 |
+## [1] &quot;ANÁLISE DE RISCOS&quot;
+##                                                                         
+##  |                       |              | dt_disc[[disciplina]] |      |
+##  |                       |              |                 FALSE | TRUE |
+##  | --------------------- | ------------ | --------------------- | ---- |
+##  | dt_disc$ano_formatura |         2020 |                    28 |   10 |
+##  |                       |         2021 |                    30 |    6 |
+##  |                       | Ou após 2021 |                   154 |    9 |
+##  |                       | #Total cases |                   212 |   25 |
+## [1] &quot;ATUÁRIA GERAL&quot;
+##                                                                         
+##  |                       |              | dt_disc[[disciplina]] |      |
+##  |                       |              |                 FALSE | TRUE |
+##  | --------------------- | ------------ | --------------------- | ---- |
+##  | dt_disc$ano_formatura |         2020 |                    35 |    3 |
+##  |                       |         2021 |                    36 |      |
+##  |                       | Ou após 2021 |                   153 |   10 |
+##  |                       | #Total cases |                   224 |   13 |
+## [1] &quot;CONSTRUÇÃO DE INDICADORES&quot;
+##                                                                         
+##  |                       |              | dt_disc[[disciplina]] |      |
+##  |                       |              |                 FALSE | TRUE |
+##  | --------------------- | ------------ | --------------------- | ---- |
+##  | dt_disc$ano_formatura |         2020 |                    35 |    3 |
+##  |                       |         2021 |                    23 |   13 |
+##  |                       | Ou após 2021 |                   151 |   12 |
+##  |                       | #Total cases |                   209 |   28 |
+## [1] &quot;CONTROLE ESTATÍSTICO DE QUALIDADE&quot;
+##                                                                         
+##  |                       |              | dt_disc[[disciplina]] |      |
+##  |                       |              |                 FALSE | TRUE |
+##  | --------------------- | ------------ | --------------------- | ---- |
+##  | dt_disc$ano_formatura |         2020 |                    29 |    9 |
+##  |                       |         2021 |                    20 |   16 |
+##  |                       | Ou após 2021 |                   143 |   20 |
+##  |                       | #Total cases |                   192 |   45 |
+## [1] &quot;ESTATÍSTICA BAYESIANA&quot;
+##                                                                         
+##  |                       |              | dt_disc[[disciplina]] |      |
+##  |                       |              |                 FALSE | TRUE |
+##  | --------------------- | ------------ | --------------------- | ---- |
+##  | dt_disc$ano_formatura |         2020 |                    35 |    3 |
+##  |                       |         2021 |                    21 |   15 |
+##  |                       | Ou após 2021 |                   147 |   16 |
+##  |                       | #Total cases |                   203 |   34 |
+## [1] &quot;ESTATÍSTICA MULTIVARIADA 1&quot;
+##                                                                         
+##  |                       |              | dt_disc[[disciplina]] |      |
+##  |                       |              |                 FALSE | TRUE |
+##  | --------------------- | ------------ | --------------------- | ---- |
+##  | dt_disc$ano_formatura |         2020 |                    38 |      |
+##  |                       |         2021 |                    17 |   19 |
+##  |                       | Ou após 2021 |                   160 |    3 |
+##  |                       | #Total cases |                   215 |   22 |
+## [1] &quot;ESTATÍSTICA NÃO-PARAMÉTRICA&quot;
+##                                                                         
+##  |                       |              | dt_disc[[disciplina]] |      |
+##  |                       |              |                 FALSE | TRUE |
+##  | --------------------- | ------------ | --------------------- | ---- |
+##  | dt_disc$ano_formatura |         2020 |                    34 |    4 |
+##  |                       |         2021 |                    31 |    5 |
+##  |                       | Ou após 2021 |                   155 |    8 |
+##  |                       | #Total cases |                   220 |   17 |
+## [1] &quot;ESTUDOS POPULACIONAIS&quot;
+##                                                                         
+##  |                       |              | dt_disc[[disciplina]] |      |
+##  |                       |              |                 FALSE | TRUE |
+##  | --------------------- | ------------ | --------------------- | ---- |
+##  | dt_disc$ano_formatura |         2020 |                    34 |    4 |
+##  |                       |         2021 |                    33 |    3 |
+##  |                       | Ou após 2021 |                   148 |   15 |
+##  |                       | #Total cases |                   215 |   22 |
+## [1] &quot;FUNDAMENTOS DE PROBABILIDADE&quot;
+##                                                                         
+##  |                       |              | dt_disc[[disciplina]] |      |
+##  |                       |              |                 FALSE | TRUE |
+##  | --------------------- | ------------ | --------------------- | ---- |
+##  | dt_disc$ano_formatura |         2020 |                    38 |      |
+##  |                       |         2021 |                    36 |      |
+##  |                       | Ou após 2021 |                   113 |   50 |
+##  |                       | #Total cases |                   187 |   50 |
+## [1] &quot;INFERÊNCIA ESTATÍSTICA (6 Créditos)&quot;
+##                                                                         
+##  |                       |              | dt_disc[[disciplina]] |      |
+##  |                       |              |                 FALSE | TRUE |
+##  | --------------------- | ------------ | --------------------- | ---- |
+##  | dt_disc$ano_formatura |         2020 |                    38 |      |
+##  |                       |         2021 |                    34 |    2 |
+##  |                       | Ou após 2021 |                   148 |   15 |
+##  |                       | #Total cases |                   220 |   17 |
+## [1] &quot;INFERÊNCIA ESTATISTICA A&quot;
+##                                                                         
+##  |                       |              | dt_disc[[disciplina]] |      |
+##  |                       |              |                 FALSE | TRUE |
+##  | --------------------- | ------------ | --------------------- | ---- |
+##  | dt_disc$ano_formatura |         2020 |                    38 |      |
+##  |                       |         2021 |                    34 |    2 |
+##  |                       | Ou após 2021 |                   151 |   12 |
+##  |                       | #Total cases |                   223 |   14 |
+## [1] &quot;INFERÊNCIA ESTATISTICA B&quot;
+##                                                                         
+##  |                       |              | dt_disc[[disciplina]] |      |
+##  |                       |              |                 FALSE | TRUE |
+##  | --------------------- | ------------ | --------------------- | ---- |
+##  | dt_disc$ano_formatura |         2020 |                    38 |      |
+##  |                       |         2021 |                    33 |    3 |
+##  |                       | Ou após 2021 |                   154 |    9 |
+##  |                       | #Total cases |                   225 |   12 |
+## [1] &quot;INTRODUÇÃO À ESTATÍSTICA&quot;
+##                                                                         
+##  |                       |              | dt_disc[[disciplina]] |      |
+##  |                       |              |                 FALSE | TRUE |
+##  | --------------------- | ------------ | --------------------- | ---- |
+##  | dt_disc$ano_formatura |         2020 |                    38 |      |
+##  |                       |         2021 |                    33 |    3 |
+##  |                       | Ou após 2021 |                   117 |   46 |
+##  |                       | #Total cases |                   188 |   49 |
+## [1] &quot;INTRODUÇÃO À INFERÊNCIA ESTATÍSTICA&quot;
+##                                                                         
+##  |                       |              | dt_disc[[disciplina]] |      |
+##  |                       |              |                 FALSE | TRUE |
+##  | --------------------- | ------------ | --------------------- | ---- |
+##  | dt_disc$ano_formatura |         2020 |                    38 |      |
+##  |                       |         2021 |                    35 |    1 |
+##  |                       | Ou após 2021 |                   107 |   56 |
+##  |                       | #Total cases |                   180 |   57 |
+## [1] &quot;INTRODUÇÃO À TEORIA DAS FILAS&quot;
+##                                                                         
+##  |                       |              | dt_disc[[disciplina]] |      |
+##  |                       |              |                 FALSE | TRUE |
+##  | --------------------- | ------------ | --------------------- | ---- |
+##  | dt_disc$ano_formatura |         2020 |                    36 |    2 |
+##  |                       |         2021 |                    33 |    3 |
+##  |                       | Ou após 2021 |                   144 |   19 |
+##  |                       | #Total cases |                   213 |   24 |
+## [1] &quot;LABORATÓRIO DE ESTATÍSTICA APLICADA&quot;
+##                                                                         
+##  |                       |              | dt_disc[[disciplina]] |      |
+##  |                       |              |                 FALSE | TRUE |
+##  | --------------------- | ------------ | --------------------- | ---- |
+##  | dt_disc$ano_formatura |         2020 |                    26 |   12 |
+##  |                       |         2021 |                    36 |      |
+##  |                       | Ou após 2021 |                   160 |    3 |
+##  |                       | #Total cases |                   222 |   15 |
+## [1] &quot;MÉTODOS EM BIOMETRIA&quot;
+##                                                                         
+##  |                       |              | dt_disc[[disciplina]] |      |
+##  |                       |              |                 FALSE | TRUE |
+##  | --------------------- | ------------ | --------------------- | ---- |
+##  | dt_disc$ano_formatura |         2020 |                    34 |    4 |
+##  |                       |         2021 |                    29 |    7 |
+##  |                       | Ou após 2021 |                   153 |   10 |
+##  |                       | #Total cases |                   216 |   21 |
+## [1] &quot;MINERAÇÃO DE DADOS&quot;
+##                                                                         
+##  |                       |              | dt_disc[[disciplina]] |      |
+##  |                       |              |                 FALSE | TRUE |
+##  | --------------------- | ------------ | --------------------- | ---- |
+##  | dt_disc$ano_formatura |         2020 |                    10 |   28 |
+##  |                       |         2021 |                    32 |    4 |
+##  |                       | Ou após 2021 |                   156 |    7 |
+##  |                       | #Total cases |                   198 |   39 |
+## [1] &quot;PESQUISA DE MERCADO&quot;
+##                                                                         
+##  |                       |              | dt_disc[[disciplina]] |      |
+##  |                       |              |                 FALSE | TRUE |
+##  | --------------------- | ------------ | --------------------- | ---- |
+##  | dt_disc$ano_formatura |         2020 |                    38 |      |
+##  |                       |         2021 |                    33 |    3 |
+##  |                       | Ou após 2021 |                   147 |   16 |
+##  |                       | #Total cases |                   218 |   19 |
+## [1] &quot;PLANEJAMENTO E ANÁLISE DE EXPERIMENTOS 1&quot;
+##                                                                         
+##  |                       |              | dt_disc[[disciplina]] |      |
+##  |                       |              |                 FALSE | TRUE |
+##  | --------------------- | ------------ | --------------------- | ---- |
+##  | dt_disc$ano_formatura |         2020 |                    38 |      |
+##  |                       |         2021 |                    18 |   18 |
+##  |                       | Ou após 2021 |                   156 |    7 |
+##  |                       | #Total cases |                   212 |   25 |
+## [1] &quot;PLANEJAMENTO E ANÁLISE DE EXPERIMENTOS 2&quot;
+##                                                                         
+##  |                       |              | dt_disc[[disciplina]] |      |
+##  |                       |              |                 FALSE | TRUE |
+##  | --------------------- | ------------ | --------------------- | ---- |
+##  | dt_disc$ano_formatura |         2020 |                    35 |    3 |
+##  |                       |         2021 |                    36 |      |
+##  |                       | Ou após 2021 |                   160 |    3 |
+##  |                       | #Total cases |                   231 |    6 |
+## [1] &quot;PROBABILIDADE 1&quot;
+##                                                                         
+##  |                       |              | dt_disc[[disciplina]] |      |
+##  |                       |              |                 FALSE | TRUE |
+##  | --------------------- | ------------ | --------------------- | ---- |
+##  | dt_disc$ano_formatura |         2020 |                    38 |      |
+##  |                       |         2021 |                    34 |    2 |
+##  |                       | Ou após 2021 |                   121 |   42 |
+##  |                       | #Total cases |                   193 |   44 |
+## [1] &quot;PROBABILIDADE 2&quot;
+##                                                                         
+##  |                       |              | dt_disc[[disciplina]] |      |
+##  |                       |              |                 FALSE | TRUE |
+##  | --------------------- | ------------ | --------------------- | ---- |
+##  | dt_disc$ano_formatura |         2020 |                    38 |      |
+##  |                       |         2021 |                    32 |    4 |
+##  |                       | Ou após 2021 |                   129 |   34 |
+##  |                       | #Total cases |                   199 |   38 |
+## [1] &quot;PROCESSOS ESTOCÁSTICOS&quot;
+##                                                                         
+##  |                       |              | dt_disc[[disciplina]] |      |
+##  |                       |              |                 FALSE | TRUE |
+##  | --------------------- | ------------ | --------------------- | ---- |
+##  | dt_disc$ano_formatura |         2020 |                    35 |    3 |
+##  |                       |         2021 |                    25 |   11 |
+##  |                       | Ou após 2021 |                   140 |   23 |
+##  |                       | #Total cases |                   200 |   37 |
+## [1] &quot;PROGRAMAÇÃO ESTATÍSTICA&quot;
+##                                                                         
+##  |                       |              | dt_disc[[disciplina]] |      |
+##  |                       |              |                 FALSE | TRUE |
+##  | --------------------- | ------------ | --------------------- | ---- |
+##  | dt_disc$ano_formatura |         2020 |                    38 |      |
+##  |                       |         2021 |                    28 |    8 |
+##  |                       | Ou após 2021 |                   134 |   29 |
+##  |                       | #Total cases |                   200 |   37 |
+## [1] &quot;SÉRIES FINANCEIRAS&quot;
+##                                                                         
+##  |                       |              | dt_disc[[disciplina]] |      |
+##  |                       |              |                 FALSE | TRUE |
+##  | --------------------- | ------------ | --------------------- | ---- |
+##  | dt_disc$ano_formatura |         2020 |                    33 |    5 |
+##  |                       |         2021 |                    34 |    2 |
+##  |                       | Ou após 2021 |                   156 |    7 |
+##  |                       | #Total cases |                   223 |   14 |
+## [1] &quot;SÉRIES TEMPORAIS&quot;
+##                                                                         
+##  |                       |              | dt_disc[[disciplina]] |      |
+##  |                       |              |                 FALSE | TRUE |
+##  | --------------------- | ------------ | --------------------- | ---- |
+##  | dt_disc$ano_formatura |         2020 |                    38 |      |
+##  |                       |         2021 |                    27 |    9 |
+##  |                       | Ou após 2021 |                   154 |    9 |
+##  |                       | #Total cases |                   219 |   18 |
+## [1] &quot;TG1&quot;
+##                                                                         
+##  |                       |              | dt_disc[[disciplina]] |      |
+##  |                       |              |                 FALSE | TRUE |
+##  | --------------------- | ------------ | --------------------- | ---- |
+##  | dt_disc$ano_formatura |         2020 |                    15 |   23 |
+##  |                       |         2021 |                    33 |    3 |
+##  |                       | Ou após 2021 |                   162 |    1 |
+##  |                       | #Total cases |                   210 |   27 |
+## [1] &quot;TG2&quot;
+##                                                                         
+##  |                       |              | dt_disc[[disciplina]] |      |
+##  |                       |              |                 FALSE | TRUE |
+##  | --------------------- | ------------ | --------------------- | ---- |
+##  | dt_disc$ano_formatura |         2020 |                    26 |   12 |
+##  |                       |         2021 |                    36 |      |
+##  |                       | Ou após 2021 |                   162 |    1 |
+##  |                       | #Total cases |                   224 |   13 |</code></pre>
 </div>
 <div id="para-que-uma-disciplina-possa-ser-oferecida-a-distancia-quantos-dos-alunos-interessados-e-que-tenham-o-pre-requisito-devem-ter-condicoes-de-cursa-la" class="section level1">
 <h1>Para que uma disciplina possa ser oferecida a distância, quantos dos alunos interessados e que tenham o pré-requisito devem ter condições de cursá-la?</h1>

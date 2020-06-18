@@ -148,10 +148,25 @@ falta de internet e falta de computador.
 # Desconsiderando suas atuais limitações de acesso, quais disciplinas você estaria disposto a cursar a distância no próximo semestre? (você tem que ter o pré-requisito)
 
 ```{r echo = FALSE}
-data$disciplinas_ead %>% 
-  str_split(", ") %>% 
+disciplinas_by_row = data$disciplinas_ead %>% 
+  str_split(", ") 
+
+disciplinas = disciplinas_by_row %>% 
   unlist() %>% 
-  table()
+  unique() %>% 
+  sort()
+disciplinas = disciplinas[not(is.na(disciplinas))]
+
+find_disciplina = function(disciplina)
+  sapply(disciplinas_by_row, function(x) disciplina %in% x)
+
+dt_disc = tibble(ano_formatura = data$ano_formatura)
+for(disciplina in disciplinas) 
+{
+  print(disciplina)
+  dt_disc[[disciplina]] = find_disciplina(disciplina)
+  print(cro(dt_disc$ano_formatura, dt_disc[[disciplina]]))
+}
 ```
 
 # Para que uma disciplina possa ser oferecida a distância, quantos dos alunos interessados e que tenham o pré-requisito devem ter condições de cursá-la?
