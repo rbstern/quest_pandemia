@@ -3,8 +3,12 @@ title: "Análise questionário pandemia"
 output: html_document
 ---
 
+
+
 ```{r echo=FALSE, warning=FALSE, message=FALSE}
 library(tidyverse)
+library(magrittr)
+library(expss)
 data = read_csv("../data/quest_pandemia.csv")
 colnames(data) = c("ano_formatura",
                    "acesso_internet",
@@ -22,11 +26,136 @@ colnames(data) = c("ano_formatura",
                    "comentarios")
 ```
 
-# Acesso a internet
+# Você atualmente possui acesso à internet?
+
+Restrito: apenas a mensagens e a e-mails.
 
 ```{r echo = FALSE}
-data$acesso_internet %>% 
-  gsub("Sim, mas restrito a emails e mensagens", 
-       "Restrito", .) %>% 
+data %<>% 
+  mutate(acesso_internet =
+           gsub("Sim, mas restrito a emails e mensagens", 
+                "Restrito", acesso_internet)
+  )
+cro(data$ano_formatura, data$acesso_internet)
+```
+
+# Você tem acesso total à internet?
+
+Inclui: escrever e rodar códigos de computador, 
+escrever e compartilhar textos, 
+baixar e ver vídeos e baixar e ler textos.
+
+```{r echo = FALSE}
+cro(data$ano_formatura, data$tipo_acesso_total)
+```
+
+# Tipos de acesso
+
+## Escrever e rodar códigos de computador
+
+```{r echo = FALSE}
+tipo_acesso_data = data %>% 
+  mutate(codigos = grepl("Escrever e rodar códigos de computador", tipo_acesso),
+         escritos = grepl("Escrever e compartilhar textos", tipo_acesso),
+         videos = grepl("Baixar e ver vídeos", tipo_acesso),
+         textos = grepl("Baixar e ler textos", tipo_acesso)
+  ) %>% 
+  select(codigos, escritos, videos, textos, ano_formatura)
+
+cro(tipo_acesso_data$ano_formatura, tipo_acesso_data$codigos)
+```
+
+## Escrever e compartilhar textos
+
+```{r echo = FALSE}
+cro(tipo_acesso_data$ano_formatura, tipo_acesso_data$escritos)
+```
+
+## Baixar e ver vídeos
+
+```{r echo = FALSE}
+cro(tipo_acesso_data$ano_formatura, tipo_acesso_data$videos)
+```
+
+## Baixar e ler textos
+
+```{r echo = FALSE}
+cro(tipo_acesso_data$ano_formatura, tipo_acesso_data$textos)
+```
+
+# Qual equipamento te falta para realizar todas as atividades remotamente?
+
+Houveram 36 respostas a esta pergunta.
+A maior parte delas indica que falta 
+um computador melhor.
+
+# As condições do seu local de estudo são:
+
+0: Ruins
+
+1: Aceitáveis, alguma dificuldade de concentração
+
+2: Ótimas
+
+```{r echo = FALSE}
+data %<>% 
+  mutate(
+    cond_local_estudo = gsub("Ruins, muita dificuldade de concentração" , 0, cond_local_estudo),
+    cond_local_estudo = gsub("Aceitáveis, alguma dificuldade de concentração", 1, cond_local_estudo),
+    cond_local_estudo = gsub("Ótimas", 2, cond_local_estudo)
+  )
+cro(data$ano_formatura, data$cond_local_estudo)
+```
+
+# Atualmente o que falta em seu local de estudo para ele ser ótimo?
+
+Houve 128 respostas. A maioria delas indica
+aspectos como silêncio, privacidade e 
+isolamento de outras pessoas.
+
+# Atualmente, quanto os livros da biblioteca física são importantes para seus estudos?
+
+0: Muito, é impossível fazer qualquer disciplina sem a biblioteca
+
+1: Razoável, é possível fazer disciplinas sem a biblioteca, se material extra for disponibilizado
+
+2: Pouco, não dependo da biblioteca física para cursar disciplina
+
+```{r echo = FALSE}
+data %<>% 
+  mutate(
+    biblioteca_importancia = gsub("Muito, é impossível fazer qualquer disciplina sem a biblioteca", 
+    0, biblioteca_importancia),
+    biblioteca_importancia = gsub("Razoável, é possível fazer disciplinas sem a biblioteca, se material extra for disponibilizado", 1, biblioteca_importancia),
+    biblioteca_importancia = gsub("Pouco, não dependo da biblioteca física para cursar disciplina", 2, biblioteca_importancia)
+  )
+
+cro(data$ano_formatura, data$biblioteca_importancia)
+```
+
+# Quantas disciplinas a distância você conseguiria cursar em um semestre?
+
+```{r echo = FALSE}
+cro(data$ano_formatura, data$num_discplinas_ead)
+```
+
+# Quais seus motivos para não fazer aulas a distância? Seja sincero.
+
+Houveram 12 respostas, que devem ser estudadas individualmente.
+Alguns motivos são dificuldade de concentração,
+falta de internet e falta de computador.
+
+# Desconsiderando suas atuais limitações de acesso, quais disciplinas você estaria disposto a cursar a distância no próximo semestre? (você tem que ter o pré-requisito)
+
+```{r echo = FALSE}
+data$disciplinas_ead %>% 
+  str_split(", ") %>% 
+  unlist() %>% 
   table()
+```
+
+# Para que uma disciplina possa ser oferecida a distância, quantos dos alunos interessados e que tenham o pré-requisito devem ter condições de cursá-la?
+
+```{r echo = FALSE}
+data$prop_acesso_para_ead %>% table()
 ```

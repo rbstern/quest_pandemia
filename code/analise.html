@@ -378,11 +378,826 @@ $(document).ready(function () {
 </div>
 
 
-<div id="acesso-a-internet" class="section level1">
-<h1>Acesso a internet</h1>
+<div id="voce-atualmente-possui-acesso-a-internet" class="section level1">
+<h1>Você atualmente possui acesso à internet?</h1>
+<p>Restrito: apenas a mensagens e a e-mails.</p>
+<table class="gmisc_table" style="border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;">
+<thead>
+<tr>
+<th style="border-top: 2px solid grey;">
+</th>
+<th colspan="3" style="font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;">
+ data$acesso_internet 
+</th>
+</tr>
+<tr>
+<th style="font-weight: 900; border-bottom: 1px solid grey; text-align: center;">
+</th>
+<th style="border-bottom: 1px solid grey; text-align: center;">
+ Não 
+</th>
+<th style="border-bottom: 1px solid grey; text-align: center;">
+ Restrito 
+</th>
+<th style="border-bottom: 1px solid grey; text-align: center;">
+ Sim 
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="4" style="font-weight: 900;">
+ data$ano_formatura 
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+   2020 
+</td>
+<td style="text-align: right;">
+</td>
+<td style="text-align: right;">
+1
+</td>
+<td style="text-align: right;">
+37
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+   2021 
+</td>
+<td style="text-align: right;">
+</td>
+<td style="text-align: right;">
+</td>
+<td style="text-align: right;">
+36
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+   Ou após 2021 
+</td>
+<td style="text-align: right;">
+1
+</td>
+<td style="text-align: right;">
+3
+</td>
+<td style="text-align: right;">
+159
+</td>
+</tr>
+<tr>
+<td style="border-bottom: 2px solid grey; text-align: left;">
+   #Total cases 
+</td>
+<td style="border-bottom: 2px solid grey; text-align: right;">
+1
+</td>
+<td style="border-bottom: 2px solid grey; text-align: right;">
+4
+</td>
+<td style="border-bottom: 2px solid grey; text-align: right;">
+232
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="voce-tem-acesso-total-a-internet" class="section level1">
+<h1>Você tem acesso total à internet?</h1>
+<p>Inclui: escrever e rodar códigos de computador, escrever e compartilhar textos, baixar e ver vídeos e baixar e ler textos.</p>
+<table class="gmisc_table" style="border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;">
+<thead>
+<tr>
+<th style="border-top: 2px solid grey;">
+</th>
+<th colspan="2" style="font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;">
+ data$tipo_acesso_total 
+</th>
+</tr>
+<tr>
+<th style="font-weight: 900; border-bottom: 1px solid grey; text-align: center;">
+</th>
+<th style="border-bottom: 1px solid grey; text-align: center;">
+ Não 
+</th>
+<th style="border-bottom: 1px solid grey; text-align: center;">
+ Sim 
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="3" style="font-weight: 900;">
+ data$ano_formatura 
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+   2020 
+</td>
+<td style="text-align: right;">
+1
+</td>
+<td style="text-align: right;">
+37
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+   2021 
+</td>
+<td style="text-align: right;">
+</td>
+<td style="text-align: right;">
+36
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+   Ou após 2021 
+</td>
+<td style="text-align: right;">
+45
+</td>
+<td style="text-align: right;">
+118
+</td>
+</tr>
+<tr>
+<td style="border-bottom: 2px solid grey; text-align: left;">
+   #Total cases 
+</td>
+<td style="border-bottom: 2px solid grey; text-align: right;">
+46
+</td>
+<td style="border-bottom: 2px solid grey; text-align: right;">
+191
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="tipos-de-acesso" class="section level1">
+<h1>Tipos de acesso</h1>
+<div id="escrever-e-rodar-codigos-de-computador" class="section level2">
+<h2>Escrever e rodar códigos de computador</h2>
+<table class="gmisc_table" style="border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;">
+<thead>
+<tr>
+<th style="border-top: 2px solid grey;">
+</th>
+<th colspan="2" style="font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;">
+ tipo_acesso_data$codigos 
+</th>
+</tr>
+<tr>
+<th style="font-weight: 900; border-bottom: 1px solid grey; text-align: center;">
+</th>
+<th style="border-bottom: 1px solid grey; text-align: center;">
+ FALSE 
+</th>
+<th style="border-bottom: 1px solid grey; text-align: center;">
+ TRUE 
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="3" style="font-weight: 900;">
+ tipo_acesso_data$ano_formatura 
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+   2020 
+</td>
+<td style="text-align: right;">
+</td>
+<td style="text-align: right;">
+38
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+   2021 
+</td>
+<td style="text-align: right;">
+</td>
+<td style="text-align: right;">
+36
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+   Ou após 2021 
+</td>
+<td style="text-align: right;">
+43
+</td>
+<td style="text-align: right;">
+120
+</td>
+</tr>
+<tr>
+<td style="border-bottom: 2px solid grey; text-align: left;">
+   #Total cases 
+</td>
+<td style="border-bottom: 2px solid grey; text-align: right;">
+43
+</td>
+<td style="border-bottom: 2px solid grey; text-align: right;">
+194
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="escrever-e-compartilhar-textos" class="section level2">
+<h2>Escrever e compartilhar textos</h2>
+<table class="gmisc_table" style="border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;">
+<thead>
+<tr>
+<th style="border-top: 2px solid grey;">
+</th>
+<th colspan="2" style="font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;">
+ tipo_acesso_data$escritos 
+</th>
+</tr>
+<tr>
+<th style="font-weight: 900; border-bottom: 1px solid grey; text-align: center;">
+</th>
+<th style="border-bottom: 1px solid grey; text-align: center;">
+ FALSE 
+</th>
+<th style="border-bottom: 1px solid grey; text-align: center;">
+ TRUE 
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="3" style="font-weight: 900;">
+ tipo_acesso_data$ano_formatura 
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+   2020 
+</td>
+<td style="text-align: right;">
+1
+</td>
+<td style="text-align: right;">
+37
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+   2021 
+</td>
+<td style="text-align: right;">
+</td>
+<td style="text-align: right;">
+36
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+   Ou após 2021 
+</td>
+<td style="text-align: right;">
+9
+</td>
+<td style="text-align: right;">
+154
+</td>
+</tr>
+<tr>
+<td style="border-bottom: 2px solid grey; text-align: left;">
+   #Total cases 
+</td>
+<td style="border-bottom: 2px solid grey; text-align: right;">
+10
+</td>
+<td style="border-bottom: 2px solid grey; text-align: right;">
+227
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="baixar-e-ver-videos" class="section level2">
+<h2>Baixar e ver vídeos</h2>
+<table class="gmisc_table" style="border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;">
+<thead>
+<tr>
+<th style="border-top: 2px solid grey;">
+</th>
+<th colspan="2" style="font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;">
+ tipo_acesso_data$videos 
+</th>
+</tr>
+<tr>
+<th style="font-weight: 900; border-bottom: 1px solid grey; text-align: center;">
+</th>
+<th style="border-bottom: 1px solid grey; text-align: center;">
+ FALSE 
+</th>
+<th style="border-bottom: 1px solid grey; text-align: center;">
+ TRUE 
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="3" style="font-weight: 900;">
+ tipo_acesso_data$ano_formatura 
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+   2020 
+</td>
+<td style="text-align: right;">
+1
+</td>
+<td style="text-align: right;">
+37
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+   2021 
+</td>
+<td style="text-align: right;">
+</td>
+<td style="text-align: right;">
+36
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+   Ou após 2021 
+</td>
+<td style="text-align: right;">
+11
+</td>
+<td style="text-align: right;">
+152
+</td>
+</tr>
+<tr>
+<td style="border-bottom: 2px solid grey; text-align: left;">
+   #Total cases 
+</td>
+<td style="border-bottom: 2px solid grey; text-align: right;">
+12
+</td>
+<td style="border-bottom: 2px solid grey; text-align: right;">
+225
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="baixar-e-ler-textos" class="section level2">
+<h2>Baixar e ler textos</h2>
+<table class="gmisc_table" style="border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;">
+<thead>
+<tr>
+<th style="border-top: 2px solid grey;">
+</th>
+<th colspan="2" style="font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;">
+ tipo_acesso_data$textos 
+</th>
+</tr>
+<tr>
+<th style="font-weight: 900; border-bottom: 1px solid grey; text-align: center;">
+</th>
+<th style="border-bottom: 1px solid grey; text-align: center;">
+ FALSE 
+</th>
+<th style="border-bottom: 1px solid grey; text-align: center;">
+ TRUE 
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="3" style="font-weight: 900;">
+ tipo_acesso_data$ano_formatura 
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+   2020 
+</td>
+<td style="text-align: right;">
+</td>
+<td style="text-align: right;">
+38
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+   2021 
+</td>
+<td style="text-align: right;">
+</td>
+<td style="text-align: right;">
+36
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+   Ou após 2021 
+</td>
+<td style="text-align: right;">
+7
+</td>
+<td style="text-align: right;">
+156
+</td>
+</tr>
+<tr>
+<td style="border-bottom: 2px solid grey; text-align: left;">
+   #Total cases 
+</td>
+<td style="border-bottom: 2px solid grey; text-align: right;">
+7
+</td>
+<td style="border-bottom: 2px solid grey; text-align: right;">
+230
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="qual-equipamento-te-falta-para-realizar-todas-as-atividades-remotamente" class="section level1">
+<h1>Qual equipamento te falta para realizar todas as atividades remotamente?</h1>
+<p>Houveram 36 respostas a esta pergunta. A maior parte delas indica que falta um computador melhor.</p>
+</div>
+<div id="as-condicoes-do-seu-local-de-estudo-sao" class="section level1">
+<h1>As condições do seu local de estudo são:</h1>
+<p>0: Ruins</p>
+<p>1: Aceitáveis, alguma dificuldade de concentração</p>
+<p>2: Ótimas</p>
+<table class="gmisc_table" style="border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;">
+<thead>
+<tr>
+<th style="border-top: 2px solid grey;">
+</th>
+<th colspan="3" style="font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;">
+ data$cond_local_estudo 
+</th>
+</tr>
+<tr>
+<th style="font-weight: 900; border-bottom: 1px solid grey; text-align: center;">
+</th>
+<th style="border-bottom: 1px solid grey; text-align: center;">
+ 0 
+</th>
+<th style="border-bottom: 1px solid grey; text-align: center;">
+ 1 
+</th>
+<th style="border-bottom: 1px solid grey; text-align: center;">
+ 2 
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="4" style="font-weight: 900;">
+ data$ano_formatura 
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+   2020 
+</td>
+<td style="text-align: right;">
+2
+</td>
+<td style="text-align: right;">
+13
+</td>
+<td style="text-align: right;">
+23
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+   2021 
+</td>
+<td style="text-align: right;">
+1
+</td>
+<td style="text-align: right;">
+15
+</td>
+<td style="text-align: right;">
+20
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+   Ou após 2021 
+</td>
+<td style="text-align: right;">
+23
+</td>
+<td style="text-align: right;">
+89
+</td>
+<td style="text-align: right;">
+51
+</td>
+</tr>
+<tr>
+<td style="border-bottom: 2px solid grey; text-align: left;">
+   #Total cases 
+</td>
+<td style="border-bottom: 2px solid grey; text-align: right;">
+26
+</td>
+<td style="border-bottom: 2px solid grey; text-align: right;">
+117
+</td>
+<td style="border-bottom: 2px solid grey; text-align: right;">
+94
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="atualmente-o-que-falta-em-seu-local-de-estudo-para-ele-ser-otimo" class="section level1">
+<h1>Atualmente o que falta em seu local de estudo para ele ser ótimo?</h1>
+<p>Houve 128 respostas. A maioria delas indica aspectos como silêncio, privacidade e isolamento de outras pessoas.</p>
+</div>
+<div id="atualmente-quanto-os-livros-da-biblioteca-fisica-sao-importantes-para-seus-estudos" class="section level1">
+<h1>Atualmente, quanto os livros da biblioteca física são importantes para seus estudos?</h1>
+<p>0: Muito, é impossível fazer qualquer disciplina sem a biblioteca</p>
+<p>1: Razoável, é possível fazer disciplinas sem a biblioteca, se material extra for disponibilizado</p>
+<p>2: Pouco, não dependo da biblioteca física para cursar disciplina</p>
+<table class="gmisc_table" style="border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;">
+<thead>
+<tr>
+<th style="border-top: 2px solid grey;">
+</th>
+<th colspan="3" style="font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;">
+ data$biblioteca_importancia 
+</th>
+</tr>
+<tr>
+<th style="font-weight: 900; border-bottom: 1px solid grey; text-align: center;">
+</th>
+<th style="border-bottom: 1px solid grey; text-align: center;">
+ 0 
+</th>
+<th style="border-bottom: 1px solid grey; text-align: center;">
+ 1 
+</th>
+<th style="border-bottom: 1px solid grey; text-align: center;">
+ 2s 
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="4" style="font-weight: 900;">
+ data$ano_formatura 
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+   2020 
+</td>
+<td style="text-align: right;">
+</td>
+<td style="text-align: right;">
+20
+</td>
+<td style="text-align: right;">
+18
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+   2021 
+</td>
+<td style="text-align: right;">
+</td>
+<td style="text-align: right;">
+21
+</td>
+<td style="text-align: right;">
+15
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+   Ou após 2021 
+</td>
+<td style="text-align: right;">
+12
+</td>
+<td style="text-align: right;">
+124
+</td>
+<td style="text-align: right;">
+25
+</td>
+</tr>
+<tr>
+<td style="border-bottom: 2px solid grey; text-align: left;">
+   #Total cases 
+</td>
+<td style="border-bottom: 2px solid grey; text-align: right;">
+12
+</td>
+<td style="border-bottom: 2px solid grey; text-align: right;">
+165
+</td>
+<td style="border-bottom: 2px solid grey; text-align: right;">
+58
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="quantas-disciplinas-a-distancia-voce-conseguiria-cursar-em-um-semestre" class="section level1">
+<h1>Quantas disciplinas a distância você conseguiria cursar em um semestre?</h1>
+<table class="gmisc_table" style="border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;">
+<thead>
+<tr>
+<th style="border-top: 2px solid grey;">
+</th>
+<th colspan="3" style="font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;">
+ data$num_discplinas_ead 
+</th>
+</tr>
+<tr>
+<th style="font-weight: 900; border-bottom: 1px solid grey; text-align: center;">
+</th>
+<th style="border-bottom: 1px solid grey; text-align: center;">
+ Algumas do semestre presencial 
+</th>
+<th style="border-bottom: 1px solid grey; text-align: center;">
+ Nenhuma 
+</th>
+<th style="border-bottom: 1px solid grey; text-align: center;">
+ Todas de um semestre presencial 
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="4" style="font-weight: 900;">
+ data$ano_formatura 
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+   2020 
+</td>
+<td style="text-align: right;">
+17
+</td>
+<td style="text-align: right;">
+1
+</td>
+<td style="text-align: right;">
+20
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+   2021 
+</td>
+<td style="text-align: right;">
+18
+</td>
+<td style="text-align: right;">
+</td>
+<td style="text-align: right;">
+18
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+   Ou após 2021 
+</td>
+<td style="text-align: right;">
+128
+</td>
+<td style="text-align: right;">
+11
+</td>
+<td style="text-align: right;">
+24
+</td>
+</tr>
+<tr>
+<td style="border-bottom: 2px solid grey; text-align: left;">
+   #Total cases 
+</td>
+<td style="border-bottom: 2px solid grey; text-align: right;">
+163
+</td>
+<td style="border-bottom: 2px solid grey; text-align: right;">
+12
+</td>
+<td style="border-bottom: 2px solid grey; text-align: right;">
+62
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="quais-seus-motivos-para-nao-fazer-aulas-a-distancia-seja-sincero." class="section level1">
+<h1>Quais seus motivos para não fazer aulas a distância? Seja sincero.</h1>
+<p>Houveram 12 respostas, que devem ser estudadas individualmente. Alguns motivos são dificuldade de concentração, falta de internet e falta de computador.</p>
+</div>
+<div id="desconsiderando-suas-atuais-limitacoes-de-acesso-quais-disciplinas-voce-estaria-disposto-a-cursar-a-distancia-no-proximo-semestre-voce-tem-que-ter-o-pre-requisito" class="section level1">
+<h1>Desconsiderando suas atuais limitações de acesso, quais disciplinas você estaria disposto a cursar a distância no próximo semestre? (você tem que ter o pré-requisito)</h1>
 <pre><code>## .
-##      Não Restrito      Sim 
-##        1        4      232</code></pre>
+##                     ANÁLISE DE REGRESSÃO 
+##                                       23 
+##                        ANÁLISE DE RISCOS 
+##                                       25 
+##                            ATUÁRIA GERAL 
+##                                       13 
+##                CONSTRUÇÃO DE INDICADORES 
+##                                       28 
+##        CONTROLE ESTATÍSTICO DE QUALIDADE 
+##                                       45 
+##                    ESTATÍSTICA BAYESIANA 
+##                                       34 
+##               ESTATÍSTICA MULTIVARIADA 1 
+##                                       22 
+##              ESTATÍSTICA NÃO-PARAMÉTRICA 
+##                                       17 
+##                    ESTUDOS POPULACIONAIS 
+##                                       22 
+##             FUNDAMENTOS DE PROBABILIDADE 
+##                                       50 
+##      INFERÊNCIA ESTATÍSTICA (6 Créditos) 
+##                                       17 
+##                 INFERÊNCIA ESTATISTICA A 
+##                                       14 
+##                 INFERÊNCIA ESTATISTICA B 
+##                                       12 
+##                 INTRODUÇÃO À ESTATÍSTICA 
+##                                       49 
+##      INTRODUÇÃO À INFERÊNCIA ESTATÍSTICA 
+##                                       57 
+##            INTRODUÇÃO À TEORIA DAS FILAS 
+##                                       24 
+##      LABORATÓRIO DE ESTATÍSTICA APLICADA 
+##                                       15 
+##                     MÉTODOS EM BIOMETRIA 
+##                                       21 
+##                       MINERAÇÃO DE DADOS 
+##                                       39 
+##                      PESQUISA DE MERCADO 
+##                                       19 
+## PLANEJAMENTO E ANÁLISE DE EXPERIMENTOS 1 
+##                                       25 
+## PLANEJAMENTO E ANÁLISE DE EXPERIMENTOS 2 
+##                                        6 
+##                          PROBABILIDADE 1 
+##                                       44 
+##                          PROBABILIDADE 2 
+##                                       38 
+##                   PROCESSOS ESTOCÁSTICOS 
+##                                       37 
+##                  PROGRAMAÇÃO ESTATÍSTICA 
+##                                       37 
+##                       SÉRIES FINANCEIRAS 
+##                                       14 
+##                         SÉRIES TEMPORAIS 
+##                                       18 
+##                                      TG1 
+##                                       27 
+##                                      TG2 
+##                                       13</code></pre>
+</div>
+<div id="para-que-uma-disciplina-possa-ser-oferecida-a-distancia-quantos-dos-alunos-interessados-e-que-tenham-o-pre-requisito-devem-ter-condicoes-de-cursa-la" class="section level1">
+<h1>Para que uma disciplina possa ser oferecida a distância, quantos dos alunos interessados e que tenham o pré-requisito devem ter condições de cursá-la?</h1>
+<pre><code>## .
+## Alguns, basta haver alunos aptos e interessados 
+##                                              34 
+##               Muitos, 50% ou mais tem condições 
+##                                              32 
+##     Quase todos, menos de 10% não tem condições 
+##                                              41 
+##                                           Todos 
+##                                             129</code></pre>
 </div>
 
 
